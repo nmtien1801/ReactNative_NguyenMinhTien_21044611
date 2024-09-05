@@ -32,7 +32,7 @@ let johnHeight2 = 1.76;
 
 // 2. Calculate both their BMIs using the formula
 function calculateBMI(mass, height) {
-    return mass / (height * height);
+  return mass / (height * height);
 }
 
 let markBMI1 = calculateBMI(markMass1, markHeight1);
@@ -42,11 +42,11 @@ let johnBMI2 = calculateBMI(johnMass2, johnHeight2);
 
 // 3. Create a Boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John
 function compareBMI(markBMI, johnBMI) {
-    if (markBMI > johnBMI) {
-        return true;
-    } else {
-        return false;
-    }
+  if (markBMI > johnBMI) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 let markHigherBMI1 = compareBMI(markBMI1, johnBMI1);
@@ -74,31 +74,31 @@ BMI (28.3) is higher than John's (23.9)
 */
 
 if (markHigherBMI1) {
-    console.log(
-        `Mark's BMI (${markBMI1.toFixed(
-        2
-      )}) is higher than John's (${johnBMI1.toFixed(2)})`
-    );
+  console.log(
+    `Mark's BMI (${markBMI1.toFixed(
+      2
+    )}) is higher than John's (${johnBMI1.toFixed(2)})`
+  );
 } else {
-    console.log(
-        `John's BMI (${johnBMI1.toFixed(
-        2
-      )}) is higher than Mark's (${markBMI1.toFixed(2)})`
-    );
+  console.log(
+    `John's BMI (${johnBMI1.toFixed(
+      2
+    )}) is higher than Mark's (${markBMI1.toFixed(2)})`
+  );
 }
 
 if (markHigherBMI2) {
-    console.log(
-        `Mark's BMI (${markBMI2.toFixed(
-        2
-      )}) is higher than John's (${johnBMI2.toFixed(2)})`
-    );
+  console.log(
+    `Mark's BMI (${markBMI2.toFixed(
+      2
+    )}) is higher than John's (${johnBMI2.toFixed(2)})`
+  );
 } else {
-    console.log(
-        `John's BMI (${johnBMI2.toFixed(
-        2
-      )}) is higher than Mark's (${markBMI2.toFixed(2)})`
-    );
+  console.log(
+    `John's BMI (${johnBMI2.toFixed(
+      2
+    )}) is higher than Mark's (${markBMI2.toFixed(2)})`
+  );
 }
 
 console.log("--------------------------------------------------");
@@ -149,13 +149,13 @@ console.log(`Koalas average score3: ${koalasAverageScore3}`);
 console.log("B2");
 // 2. Compare the team's average scores to determine the winner of the competition, and print it to the console
 function determineWinner(dolphinsAverageScore, koalasAverageScore) {
-    if (dolphinsAverageScore > koalasAverageScore) {
-        return `Dolphins win (${dolphinsAverageScore} vs. ${koalasAverageScore})`;
-    } else if (koalasAverageScore > dolphinsAverageScore) {
-        return `Koalas win (${koalasAverageScore} vs. ${dolphinsAverageScore})`;
-    } else {
-        return `It's a draw (${dolphinsAverageScore} vs. ${koalasAverageScore})`;
-    }
+  if (dolphinsAverageScore > koalasAverageScore) {
+    return `Dolphins win (${dolphinsAverageScore} vs. ${koalasAverageScore})`;
+  } else if (koalasAverageScore > dolphinsAverageScore) {
+    return `Koalas win (${koalasAverageScore} vs. ${dolphinsAverageScore})`;
+  } else {
+    return `It's a draw (${dolphinsAverageScore} vs. ${koalasAverageScore})`;
+  }
 }
 
 console.log(determineWinner(dolphinsAverageScore1, koalasAverageScore1));
@@ -166,34 +166,34 @@ console.log("B3");
 
 // 3. Bonus 1: Include a requirement for a minimum score of 100
 function determineWinnerWithMinimumScore(
-    dolphinsAverageScore,
-    koalasAverageScore
+  dolphinsAverageScore,
+  koalasAverageScore
 ) {
-    if (
-        dolphinsAverageScore > koalasAverageScore &&
-        dolphinsAverageScore >= 100
-    ) {
-        return `Dolphins win (${dolphinsAverageScore} vs. ${koalasAverageScore})`;
-    } else if (
-        koalasAverageScore > dolphinsAverageScore &&
-        koalasAverageScore >= 100
-    ) {
-        return `Koalas win (${koalasAverageScore} vs. ${dolphinsAverageScore})`;
-    } else {
-        return `No team wins the trophy`;
-    }
+  if (
+    dolphinsAverageScore > koalasAverageScore &&
+    dolphinsAverageScore >= 100
+  ) {
+    return `Dolphins win (${dolphinsAverageScore} vs. ${koalasAverageScore})`;
+  } else if (
+    koalasAverageScore > dolphinsAverageScore &&
+    koalasAverageScore >= 100
+  ) {
+    return `Koalas win (${koalasAverageScore} vs. ${dolphinsAverageScore})`;
+  } else {
+    return `No team wins the trophy`;
+  }
 }
 
 console.log(
-    determineWinnerWithMinimumScore(dolphinsAverageScore1, koalasAverageScore1)
+  determineWinnerWithMinimumScore(dolphinsAverageScore1, koalasAverageScore1)
 );
 
 console.log(
-    determineWinnerWithMinimumScore(dolphinsAverageScore2, koalasAverageScore2)
+  determineWinnerWithMinimumScore(dolphinsAverageScore2, koalasAverageScore2)
 );
 
 console.log(
-    determineWinnerWithMinimumScore(dolphinsAverageScore3, koalasAverageScore3)
+  determineWinnerWithMinimumScore(dolphinsAverageScore3, koalasAverageScore3)
 );
 
 console.log("B4");
@@ -201,49 +201,97 @@ console.log("B4");
 // 4. Bonus 2: Minimum score also applies to a draw
 
 function determineWinnerWithMinimumScoreAndDraw(
-    dolphinsAverageScore,
-    koalasAverageScore
+  dolphinsAverageScore,
+  koalasAverageScore
 ) {
-    if (
-        dolphinsAverageScore > koalasAverageScore &&
-        dolphinsAverageScore >= 100
-    ) {
-        return `Dolphins win (${dolphinsAverageScore} vs. ${koalasAverageScore})`;
-    } else if (
-        koalasAverageScore > dolphinsAverageScore &&
-        koalasAverageScore >= 100
-    ) {
-        return `Koalas win (${koalasAverageScore} vs. ${dolphinsAverageScore})`;
-    } else if (
-        dolphinsAverageScore === koalasAverageScore &&
-        dolphinsAverageScore >= 100 &&
-        koalasAverageScore >= 100
-    ) {
-        return `It's a draw (${dolphinsAverageScore} vs. ${koalasAverageScore})`;
-    } else {
-        return `No team wins the trophy`;
-    }
+  if (
+    dolphinsAverageScore > koalasAverageScore &&
+    dolphinsAverageScore >= 100
+  ) {
+    return `Dolphins win (${dolphinsAverageScore} vs. ${koalasAverageScore})`;
+  } else if (
+    koalasAverageScore > dolphinsAverageScore &&
+    koalasAverageScore >= 100
+  ) {
+    return `Koalas win (${koalasAverageScore} vs. ${dolphinsAverageScore})`;
+  } else if (
+    dolphinsAverageScore === koalasAverageScore &&
+    dolphinsAverageScore >= 100 &&
+    koalasAverageScore >= 100
+  ) {
+    return `It's a draw (${dolphinsAverageScore} vs. ${koalasAverageScore})`;
+  } else {
+    return `No team wins the trophy`;
+  }
 }
 
 console.log(
-    determineWinnerWithMinimumScoreAndDraw(
-        dolphinsAverageScore1,
-        koalasAverageScore1
-    )
+  determineWinnerWithMinimumScoreAndDraw(
+    dolphinsAverageScore1,
+    koalasAverageScore1
+  )
 );
 
 console.log(
-    determineWinnerWithMinimumScoreAndDraw(
-        dolphinsAverageScore2,
-        koalasAverageScore2
-    )
+  determineWinnerWithMinimumScoreAndDraw(
+    dolphinsAverageScore2,
+    koalasAverageScore2
+  )
 );
 
 console.log(
-    determineWinnerWithMinimumScoreAndDraw(
-        dolphinsAverageScore3,
-        koalasAverageScore3
-    )
+  determineWinnerWithMinimumScoreAndDraw(
+    dolphinsAverageScore3,
+    koalasAverageScore3
+  )
 );
 
 console.log("--------------------------------------------------");
+
+/*
+    Coding Challenge #4
+    Steven wants to build a very simple tip calculator for whenever he goes eating in a 
+    restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 
+    300. If the value is different, the tip is 20%.
+
+    Your tasks:
+    1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for 
+    this. It's not allowed to use an if/else statement � (If it's easier for you, you can 
+    start with an if/else statement, and then try to convert it to a ternary 
+    operator!)
+    2. Print a string to the console containing the bill value, the tip, and the final value 
+    (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 
+    316.25”
+
+    Test data:
+    § Data 1: Test for bill values 275, 40 and 430
+    Hints:
+    § To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+    § Value X is between 50 and 300, if it's >= 50 && <= 300 
+*/
+
+let bill1 = 275;
+let bill2 = 40;
+let bill3 = 430;
+
+// này để kiểm tra bill có nằm trong khoảng từ 50 đến 300 không và tính tip tương ứng
+let tip1 = bill1 >= 50 && bill1 <= 300 ? bill1 * 0.15 : bill1 * 0.2;
+let tip2 = bill2 >= 50 && bill2 <= 300 ? bill2 * 0.15 : bill2 * 0.2;
+let tip3 = bill3 >= 50 && bill3 <= 300 ? bill3 * 0.15 : bill3 * 0.2;
+
+// in ra
+console.log(
+  `The bill was ${bill1}, the tip was ${tip1}, and the total value ${
+    bill1 + tip1
+  }`
+);
+console.log(
+  `The bill was ${bill2}, the tip was ${tip2}, and the total value ${
+    bill2 + tip2
+  }`
+);
+console.log(
+  `The bill was ${bill3}, the tip was ${tip3}, and the total value ${
+    bill3 + tip3
+  }`
+);
