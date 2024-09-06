@@ -1,0 +1,3 @@
+1. dùng expo.dev(login - giống github) - > vào picsum lấy ảnh để flex
+2. flex
+3. game frog
